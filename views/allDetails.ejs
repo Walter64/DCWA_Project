@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+    <!-- page heading -->
+    <h1>All City Details</h1>
+
+    <!-- display add country form -->
+    <form action="/allDetails" method="GET">
+        <% city.forEach((city) => { %>
+
+        <label>City Code:</label><br>    
+        <input type="text" name="<%= city.cty_code %>"><br><br>
+
+        <label>City Name:</label><br>
+        <input type="text" name="<%= city.cty_name %>"><br><br>
+
+        <label>City Population:</label><br>
+        <input type="number" name="<%= city.cty_population %>"><br><br>
+
+        <label>By the Sea:</label><br>
+        <input type="text" name="<%= city.cty_isCoastal %>"><br><br>
+        
+        <label>Area (KM):</label><br>
+        <input type="number" name="<%= city.cty_areaKM %>"><br><br><br>
+        <%}) %>        
+    </form>
+
+    <form action="/allDetails" method="GET">
+        <% country.forEach((country) => { %>
+            <label>Country Code:</label><br>
+            <input type="text" name="<%= country.co_code %>"><br><br>
+            <label>Country Name:</label><br>
+            <input type="text" name="<%= country.co_name %>"><br><br>        
+        <%}) %>
+    </form>
+
+    <!-- back to home page link -->
+    <a href="/">Home</a>
+
+</html>
+

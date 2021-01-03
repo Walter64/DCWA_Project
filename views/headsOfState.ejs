@@ -1,0 +1,29 @@
+<!-- CSS table styling -->
+<style>
+    table, th, td{
+        border: 1px solid black;
+    }
+</style>
+
+<!-- page heading -->
+<h1>Heads Of State</h1>
+
+<!-- navigate to Add Head of State page -->
+<button onclick="window.location.href='/addHeadOfState'">Add Head Of State</button><br><br>
+
+<!-- display data in table -->
+<table>
+    <tr>
+        <th>Country Code</th>
+        <th>Head Of State</th>
+    </tr>
+<% heads.forEach((headOfState) => { %>
+    <tr>
+        <td><%= headOfState._id %></td>
+        <td><%= headOfState.headOfState %></td>
+    </tr>
+    <%}) %>
+</table><br>
+
+<!-- back to home page -->
+<a href="/">Home</a>
